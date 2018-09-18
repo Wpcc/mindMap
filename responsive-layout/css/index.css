@@ -107,6 +107,7 @@ a:hover{
   background-color: #fff;
   border:none;
   border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 0;
 }
 .wjs-nav .wjs_icon_logo{
   font-size: 50px;
@@ -217,4 +218,20 @@ fieldset[disabled] .wjs-nav .btn-link:hover,
 .wjs-nav .btn-link[disabled]:focus,
 fieldset[disabled] .wjs-nav .btn-link:focus {
   color: #ccc;
+}
+
+/* ----------carousel模块------------- */
+/* PC端 */
+.carousel-inner .item a:first-child{
+  display: block;
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* 移动端 */
+.carousel-inner .item a:last-child img{
+  display: block;
+  width: 100%;
 }

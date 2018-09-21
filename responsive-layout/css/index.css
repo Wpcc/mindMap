@@ -26,7 +26,7 @@ a:hover{
 }
 /*4.怎么使用维护性更好*/
 .wjs_icon{
-    font-family: wjs;
+    font-family: 'wjs';
 }
 .wjs_icon_phone::before{
     content: "\e908";
@@ -39,6 +39,15 @@ a:hover{
 }
 .wjs_icon_name::before{
   content: "\e93e";
+}
+.wjs_icon_dollar::before{
+  content:"\e903";
+}
+.wjs_icon_clock::before{
+  content: "\e906";
+}
+.wjs_icon_video::before{
+  content: "\e905";
 }
 
 
@@ -222,7 +231,7 @@ fieldset[disabled] .wjs-nav .btn-link:focus {
 
 /* ----------carousel模块------------- */
 /* PC端 */
-.carousel-inner .item a:first-child{
+.carousel-inner .pc_banner a:first-child{
   display: block;
   height: 400px;
   width: 100%;
@@ -231,7 +240,208 @@ fieldset[disabled] .wjs-nav .btn-link:focus {
   background-position: center;
 }
 /* 移动端 */
-.carousel-inner .item a:last-child img{
+.carousel-inner .mobile_banner a:last-child img{
   display: block;
   width: 100%;
+}
+/*----------信息-------------*/
+.wjs_info{
+  border-bottom: 1px solid #ccc;
+  padding:15px 0;
+}
+/* 通过媒体查询修改版心宽度 */
+@media screen and (min-width:1200px){
+  .wjs_info > .container{
+    width: 970px;
+  }
+}
+.wjs_info > .container > a{
+  display: block;
+  padding:15px;
+}
+.wjs_info > .container > a:hover{
+  color: #e92332;
+}
+.wjs_info > .container > a .wjs_icon_dollar{
+  font-size: 30px;
+}
+/* ------------ 预约 ------------ */
+.wjs_book{
+  padding: 40px 0;
+}
+/* 通过媒体查询修改版心宽度 */
+@media screen and (min-width:1200px){
+  .wjs_book > .container{
+    width: 970px;
+  }
+}
+.wjs_book > .container .wjs_icon{
+  font-size: 20px;
+}
+
+.wjs_book .clock_book{
+  color: #e92332;
+  border-bottom: 1px dashed #e92332;
+}
+.wjs_book .video_book:hover{
+  color: #e92332;
+}
+/* ------------- product -------------- */
+.wjs_product{
+  width: 100%;
+  height: 500px;
+  background: #f5f5f5;
+}
+.wjs_product .nav_parents{
+  width: 100%;
+  overflow: hidden;
+}
+.wjs_product .nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+.wjs_product .nav-tabs > li {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+.wjs_product .nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: none;
+  border-radius: 4px 4px 0 0;
+}
+.wjs_product .nav-tabs > li > a:hover {
+  background-color: #f5f5f5;
+}
+.wjs_product .nav-tabs > li.active > a,
+.wjs_product .nav-tabs > li.active > a:hover,
+.wjs_product .nav-tabs > li.active > a:focus {
+  color: #333;
+  cursor: default;
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: 3px solid #e92322;
+}
+.wjs_product .nav-tabs.nav-justified {
+  width: 100%;
+  border-bottom: 0;
+}
+.wjs_product .nav-tabs.nav-justified > li {
+  float: none;
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.wjs_product .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.wjs_product .nav-tabs.nav-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.wjs_product .nav-tabs.nav-justified > .active > a,
+.wjs_product .nav-tabs.nav-justified > .active > a:hover,
+.wjs_product .nav-tabs.nav-justified > .active > a:focus {
+  border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+  .wjs_product .nav-tabs.nav-justified > li > a {
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .wjs_product .nav-tabs.nav-justified > .active > a,
+  .wjs_product .nav-tabs.nav-justified > .active > a:hover,
+  .wjs_product .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #fff;
+  }
+}
+/* 内容样式 */
+.tab-content .discount_coupon{
+  display: block;
+  width: 100%;
+  height: 150px;
+  margin-top: 30px;
+  background: #fff;
+  box-shadow: 3px 3px 5px #d8d8d8;
+  color: #666;
+}
+.discount_coupon .right{
+  float: right;
+  width: 80px;
+  height: 100%;
+  text-align: center;
+  border-left: 1px dashed #d8d8d8;
+  position: relative;
+}
+.discount_coupon.active{
+  background: #e92322;
+  color: #fff;
+}
+.discount_coupon.active .right{
+  border-left: 1px dashed #fff;
+}
+.discount_coupon.active .left::before{
+  content: '\e915';
+  font-family: 'wjs';
+  font-size: 33px;
+  position: absolute;
+  left: 0;
+  top: -7px;
+}
+.discount_coupon.active .right p:first-of-type{
+  color: #fff;
+}
+.discount_coupon .right p:first-of-type{
+  margin-top: 25px;
+  color: #e92322;
+}
+.discount_coupon .right p:first-of-type b{
+  font-size: 48px;
+}
+.discount_coupon .right p:first-of-type sub{
+  bottom: 0;
+}
+.discount_coupon .left{
+  float:left;
+  width: calc(100% - 80px);
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.discount_coupon .left > h3{
+  font-size: 16px;
+  margin-top: 10px;
+}
+.discount_coupon .left > div{
+  font-size: 12px;
+}
+.discount_coupon .right::before,
+.discount_coupon .left::after{
+  content: '';
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: #f5f5f5;
+  position: absolute;
+}
+.discount_coupon .left::after{
+  top: -6px;
+  right: -6px;
+  box-shadow: 0 -1px 2px #e8e8e8 inset;
+}
+.discount_coupon .right::before{
+  bottom: -6px;
+  left: -6px;
+  box-shadow: 0 2px 3px #d8d8d8 inset;
 }
